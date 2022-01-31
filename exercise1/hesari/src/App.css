@@ -1,0 +1,106 @@
+.App{
+position: absolute;
+background-color: rgb(240, 233, 233);
+}
+
+.mainHeader {
+  background-color: rgb(0, 0, 70);
+  color:white;
+}
+.innerHeader {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-size: 50px;
+}
+
+.headerElement {
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.headerBtn{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 6px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.fastNews{
+  background-color: rgb(37, 180, 199);
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 20px;
+  color: white;
+}
+.fastElement{
+  border: 1px solid;
+  padding: 20px;
+  cursor:pointer;
+}
+.fastAdElement{
+  border: 1px solid;
+  padding: 20px;
+  background-color: rgb(129, 178, 250);
+  cursor:pointer;
+}
+.mainArea{
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+}
+.mainNews{
+  width: 80%;
+  background-color: white;
+}
+.mainHeadline{
+  font-size: 40px;
+  border-top: 1px solid;
+}
+.HSSeuraa{
+  font-size: 30px;
+  color: red;
+  cursor:pointer;
+}
+.sideNews{
+  width: 20%;
+  margin-left: 25px;
+  background-color: white;
+}
+.luetuimmat{
+  border-bottom: 2px solid;
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+.sideNewsBox{
+  border-bottom: 1px solid;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  color: black;
+  cursor: pointer;
+}
+.sideNumber{
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(37, 180, 199);
+  display: flex;
+}
