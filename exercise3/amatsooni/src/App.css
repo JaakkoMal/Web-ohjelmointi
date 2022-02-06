@@ -1,0 +1,21 @@
+.App {
+  position: absolute;
+}
+
+.title{
+  background-color: rgb(230, 50, 38);
+  text-align: center;
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.productBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: 30px;
+}
