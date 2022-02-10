@@ -12,10 +12,16 @@
   grid-template-columns: 25% 25% 25% 25%;
 }
 .productBox {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
   margin: 30px;
+  min-width: 200px;
+}
+.productBox img {
+  width: 100%;
+  margin-bottom: 20px;
 }
