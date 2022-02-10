@@ -1,12 +1,12 @@
 import './App.css';
 import Title from './components/Title';
 import ProductList from './components/ProductList';
-import {useState} from 'react';
+//import {useState} from 'react';
 import Search from './components/Search';
 
 function App() {
 
-const [products, setProducts] = useState([
+const products = [
   {
     name: 'Glow in the dark toilet paper',
     image: <img src="TP.jpg"/>,
@@ -48,37 +48,33 @@ const [products, setProducts] = useState([
     price: 9.99
   }
 
-]);
+];
 
-const [description, setDescription] = useState("");
 
-const doSearch = (description) => {
-  console.log("searching..");
-  console.log(description);
+const {search} = window.location;
+const query = new URLSearchParams(search).get('s');
 
-  let newProducts = [...products];
-
-  let searchedItemName = newProducts.findIndex(i => description == i.name);
-  if(searchedItemName != -1){
-    let newElement = {...newProducts[searchedItemName]}
-    newElement.name = description;
-    setProducts(newProducts);
-    console.log("Tässä uusi elementti: " + newElement.name + newElement.price);
-  }else{
-    console.log("Ei vittu löydy tommosta ku " + description);
+const filterProducts = (products, query) => {
+  if (!query) {
+    return products;
   }
-  
-}
+  return products.filter((product) => {
+    const productName = product.name.toLowerCase();
+    return productName.includes(query);
+  });
+};
+
+
+const filteredProducts = filterProducts(products, query);
 
   return (
     <div className="App">
       <Title />
-      <Search 
-      onSearchClick={doSearch}
-      descriptionFieldValue={description} 
-      onSearchItemChange ={(descriptionValue) => setDescription(descriptionValue)}/>
+      <Search />
       <div className="productContainer">
-      {products.map(p => <ProductList nimi={p.name} kuva={p.image} hinta={p.price}/>)}
+      {filteredProducts.map(product => (
+        <ProductList key ={product.key} nimi={product.name} kuva={product.image} hinta={product.price}/>
+      ))}
       </div>
       
     </div>
